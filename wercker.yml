@@ -23,7 +23,7 @@ build:
     # A step that executes `npm test` command
     - npm-test
 
-    -script:
+    - script:
       name: install ionic
       code: npm install -g cordova ionic
     # A custom script step, name value is used in the UI
