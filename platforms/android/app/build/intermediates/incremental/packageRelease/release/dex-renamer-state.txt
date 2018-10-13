@@ -1,0 +1,4 @@
+#Thu Oct 04 17:27:16 CEST 2018
+base.0=/Users/Robin/Desktop/carpeta sin título 3/APP2/meetnear/platforms/android/app/build/intermediates/transforms/dex/release/0
+renamed.0=classes.dex
+file.0=/Users/Robin/Desktop/carpeta sin título 3/APP2/meetnear/platforms/android/app/build/intermediates/transforms/dex/release/0/classes.dex

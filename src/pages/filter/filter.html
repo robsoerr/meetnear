@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>MeetNear</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding id="signInPage">
+  <h3>Set up your search parameters</h3>
+
+  <div id="signInForm">
+    <form [formGroup]="form">
+    <ion-list>
+
+      <ion-item>
+        <ion-label>Partner Age</ion-label>
+          <ion-select [(ngModel)]="profile.wage" formControlName="fage">
+            <ion-option value="18">18-23</ion-option>
+            <ion-option value="24">24-29</ion-option>
+            <ion-option value="30">30-35</ion-option>
+            <ion-option value="36">>36</ion-option>
+            <ion-option value="99">All Ages</ion-option>
+          </ion-select>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Partner Distance</ion-label>
+          <ion-select [(ngModel)]="profile.wdistance" formControlName="fdist">
+            <ion-option value="2"> less than 2km </ion-option>
+            <ion-option value="5"> less than 5km</ion-option>
+            <ion-option value="10"> less than 10km</ion-option>
+            <ion-option value="15"> less than 15km</ion-option>
+            <ion-option value="9999"> Anywhere </ion-option>
+        </ion-select>
+      </ion-item>
+
+
+      <ion-item>
+        <button ion-button large block (click)="searchUser()" [disabled]="!form.valid">Search</button>
+      </ion-item>
+
+    </ion-list>
+    </form>
+  </div>
+
+
+
+</ion-content>
