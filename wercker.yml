@@ -47,4 +47,5 @@ push:
         tag: latest
         repository: $DOCKER_REPOSITORY
         registry: https://registry.hub.docker.com/v2
-        cmd: ionic serve
+        ENTRYPOINT: ["ionic"]
+        CMD: ["serve", "8100", "--address", "0.0.0.0"]
