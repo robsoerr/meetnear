@@ -47,4 +47,4 @@ push:
         tag: latest
         repository: $DOCKER_REPOSITORY
         registry: https://registry.hub.docker.com/v2
-        code: ionic serve
+        cmd: ionic serve
