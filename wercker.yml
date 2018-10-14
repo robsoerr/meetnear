@@ -12,13 +12,13 @@ box: node
 
     # - mongo
     # https://devcenter.wercker.com/administration/services/examples/mongodb/
-
+COPY . /www/app
 build:
   # The steps that will be executed on build
   # Steps make up the actions in your pipeline
   # Read more about steps on our dev center:
   # https://devcenter.wercker.com/development/steps/
-  COPY . /www/app
+  
   steps:
     # A step that executes `npm install` command
     - npm-install
