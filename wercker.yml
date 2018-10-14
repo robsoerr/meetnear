@@ -12,7 +12,7 @@ box: node
 
     # - mongo
     # https://devcenter.wercker.com/administration/services/examples/mongodb/
-COPY . /www/app
+COPY: . /www/app
 build:
   # The steps that will be executed on build
   # Steps make up the actions in your pipeline
@@ -34,7 +34,7 @@ build:
       name: install cordova
       code: npm install -g cordova
 
-    WORKDIR /www/app
+    WORKDIR: /www/app
     # A custom script step, name value is used in the UI
     # and the code value contains the command that get executed
     - script:
