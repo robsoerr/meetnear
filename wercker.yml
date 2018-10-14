@@ -12,7 +12,7 @@ box: node
 
     # - mongo
     # https://devcenter.wercker.com/administration/services/examples/mongodb/
-COPY: . /www/app
+
 build:
   # The steps that will be executed on build
   # Steps make up the actions in your pipeline
@@ -26,28 +26,17 @@ build:
     - npm-test
 
 
-
-    - script:
+    - internal/shell:
       name: install ionic
-      code: npm install -g ionic
-    - script:
-      name: install cordova
-      code: npm install -g cordova
+      code: npm install -g ionic cordova  
 
     
     # A custom script step, name value is used in the UI
     # and the code value contains the command that get executed
-    - script:
-        name: echo nodejs information
-        code: |
-          echo "node version $(node -v) running"
-          echo "npm version $(npm -v) running"
 
 push:
   steps:
     # Push to public docker repo
-    - WORKDIR: /www/app
-    - RUN: npm install
     - internal/docker-push:
         username: $DOCKER_USERNAME
         password: $DOCKER_PASSWORD
