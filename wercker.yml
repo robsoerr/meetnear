@@ -1,5 +1,5 @@
 
-
+FROM: mikamboo/ionic-box
 
 # This is the build pipeline. Pipelines are the core of wercker
 # Read more about pipelines on our dev center
@@ -29,7 +29,7 @@ build:
     # and the code value contains the command that get executed
 
 push:
-  FROM: mikamboo/ionic-box
+  
   
   steps:
     # Push to public docker repo
