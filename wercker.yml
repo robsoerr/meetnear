@@ -27,6 +27,14 @@ build:
       - internal/docker-build: 
         dockerfile: Dockerfile 
         image-name: my-new-image
+
+      - internal/docker-push:
+        image-name: my-new-image
+        username: $DOCKER_USERNAME
+        password: $DOCKER_PASSWORD
+        tag: latest
+        repository: $DOCKER_REPOSITORY
+        registry: https://registry.hub.docker.com/v2
   
     # A custom script step, name value is used in the UI
     # and the code value contains the command that get executed
