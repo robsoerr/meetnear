@@ -15,7 +15,7 @@ build:
   # The steps that will be executed on build
   # Steps make up the actions in your pipeline
   # Read more about steps on our dev center:
-  # https://devcenter.wercker.com/development/steps/
+  # https://devcenter.wercker.com/development/steps/ç
   box:
     id: agileek/ionic-framework
     username: $DOCKER_USERNAME
