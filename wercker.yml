@@ -30,7 +30,7 @@ build:
 
 push:
   
-  FROM beevelop/ionic:latest
+  FROM: beevelop/ionic:latest
   steps:
     # Push to public docker repo
     - internal/docker-push:
