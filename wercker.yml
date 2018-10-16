@@ -1,5 +1,5 @@
 
-FROM: mikamboo/ionic-box
+
 
 # This is the build pipeline. Pipelines are the core of wercker
 # Read more about pipelines on our dev center
@@ -30,7 +30,7 @@ build:
 
 push:
   
-  
+  FROM beevelop/ionic:latest
   steps:
     # Push to public docker repo
     - internal/docker-push:
