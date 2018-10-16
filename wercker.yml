@@ -24,12 +24,11 @@ build:
 
     steps:
 
-      - internal/docker-build: 
-        dockerfile: Dockerfile 
-        image-name: my-new-image
+      #- internal/docker-build: 
+       # dockerfile: Dockerfile 
+        #image-name: my-new-image
 
       - internal/docker-push:
-        image-name: my-new-image
         username: $DOCKER_USERNAME
         password: $DOCKER_PASSWORD
         tag: latest
